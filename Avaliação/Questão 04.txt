@@ -1,0 +1,19 @@
+hooks, que permitem o uso de vários recursos
+de forma simples através de funções. 
+Eles também ajudam a organizar a lógica 
+utilizada dentro dos componentes.
+
+useStateé um React Hook que permite
+adicionar uma variável de estado ao seu componente.
+const [state, setState] = useState(initialState);
+
+useEffecté um React Hook que permite
+sincronizar um componente com um sistema externo.
+ 
+        useEffect(() => {
+  	        const connection = createConnection(serverUrl, roomId);
+            connection.connect();
+  	        return () => {
+                connection.disconnect();
+  	        };
+        }, [serverUrl, roomId]);
